@@ -18,11 +18,8 @@
 #include "Pedidos.h"
 
 typedef struct {
-
+    int IdCliente;
 	char nombre[50];
-
-
-
 
 }eLocalidad;
 
@@ -78,9 +75,9 @@ int IdElegidoPass();
 int CallerICliente(int *iDelClient);
 int IPass();
 int PedidoIdChecker(ePedido listaP[], int tamp);
-
+int BuscarIdLocalidad(int* idUltimo);
 void VisualizarListaClientes(eCliente lista[], int tam);
 void VisualizarListaPedidosPendientes(ePedido listaP[], int tamp);
-
+eLocalidad VerificarLocalidad(char local[], int *ID);
 
 #endif /* CLIENTES_H_ */

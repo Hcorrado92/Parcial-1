@@ -15,20 +15,12 @@ int recicladoC = 0;
 
 int acumuladorC = 0;
 
-eLocalidad AltaLocalidad()
-{
 
-	eLocalidad localidad;
-
-	char nombre[50];
-
-	return localidad;
-}
 
 eCliente AltaCliente(){
 
     eCliente cliente;
-
+    //char localidad[];
     //PedirString(empleado.nombre , "Ingrese el nombre del empleado", 50);
 
 	cliente.idCliente = GenerarId(&id);
@@ -36,15 +28,24 @@ eCliente AltaCliente(){
 	cliente.cuit = PedirEntero("Ingrese el CUIT del cliente \n");
 	PedirString(cliente.calleEmpresa ,  "Ingrese la direccion de la empresa \n", 50);
 	PedirString(cliente.localidadEmpresa ,  "Ingrese la localidad de la empresa  \n", 50);
-
+    //PedirString(localidad, "Ingrese una localidad \n", 50);
 	cliente.pedido = 0;
     cliente.isEmpty = FULL;
 
+    //AgregarLocalidad(localidad, &id);
 
 	return cliente;
 }
 
+eLocalidad VerificarLocalidad(char local[], int *ID)
+{
+	eLocalidad localidad;
 
+	localidad.IdCliente = *ID;
+	strcpy(localidad.nombre, local);
+
+	return localidad;
+}
 
 
 ePunteros Punteros()
@@ -380,6 +381,21 @@ int BorrarCliente (eCliente lista[], int tam, int* iClient)
 
 }
 
+int BuscarIdLocalidad(int* idUltimo)
+{
+
+		int idDelCliente;
+
+
+	idDelCliente = *idUltimo;
+
+
+	return idDelCliente;
+
+}
+
+
+
 int AgregarPedido(eCliente lista[], ePedido listaP[], int tam, int tamP, int* iClient, int* idElegid)
 {
 
@@ -658,6 +674,7 @@ void MostrarMenu(eCliente lista[], ePedido listaP[], int tam, int tamp)
 	    			 printf("El promedio reciclado por cliente es %d \n", auxiliar);
 
 	    		 }
+
 
 	    	 }
 

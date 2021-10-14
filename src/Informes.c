@@ -8,6 +8,74 @@
 
 #include "Informes.h"
 
+int masPendientes = 0;
+int masCompletados = 0;
+int masPedidos = 0;
+
+
+/*int BuscaClienteConMasPendientes (eCliente lista[], ePedido listaP, int tam, int tamP, int estado, int *masP)
+{
+
+	int i;
+	int j;
+
+	int id;
+	int idMasPendiente;
+	int acumulador;
+	acumulador = 0;
+
+
+	for (i = 0; i < tam; i++)
+	{
+		id = lista[i].idCliente;
+		idMasPendiente = lista[i].idCliente;
+	  for (j  = 0; j < tamP; j++)
+	  {
+		  if(listaP[i].cliente == id && listaP[i].estado == 1)
+
+		  {
+			  acumulador++;
+		  }
+
+
+		  *masP = idMasPendiente;
+
+		  break;
+	  }
+
+	}
+
+return acumulador;
+
+}
+
+
+void ClienteConMasPendientes(eCliente lista[], ePedido listaP, int tam, int tamP, int estado, int* masP)
+
+{
+	int flag;
+	int masPendientes;
+	int i;
+
+	flag = 0;
+	for (i = 0; i < tam; i++)
+	{
+
+		masPendientes = BuscarClientesConMasPendientes(lista, listaP, tam, tamP, 1, &masPendientes);
+
+		if (flag == 0 || masPendientes > *masP )
+		{
+			*masP = masPendientes;
+		}
+
+
+
+	}
+
+	printf("El cliente con mas pendientes es %d", &masPendientes);
+
+}
+*/
 void MostrarListaClientes(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado)
 {
 

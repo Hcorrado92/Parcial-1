@@ -36,11 +36,10 @@ int main(void) {
 	setbuf (stdout, NULL);
 	 eCliente ListaClientes [TAM]; //= {{1,"Hernan", 123, "Washington", 0, "Floresta", FULL} , {2,"Hernan", 123, "Wasasdhington127", 0, "Sarandi", FULL}};
      ePedido ListaPedidos [TAM];
-     eLocalidad ListaLocalidad[3] = {{"Sarandi"}, {"Flores"}, {"Floresta"}};
+    // eLocalidad ListaLocalidad[3] = {{"Sarandi"}, {"Flores"}, {"Floresta"}};
 
 	 InicializarListaProducto(ListaClientes, TAM);
 	 InicializarListaPedido(ListaPedidos, TAMP);
-	 InicializarListaPedido(ListaLocalidad, TAMP);
 
 	 ePunteros TraerPunteros();
 
