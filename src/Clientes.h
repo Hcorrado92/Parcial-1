@@ -17,6 +17,15 @@
 //#include "Union.h"
 #include "Pedidos.h"
 
+typedef struct {
+
+	char nombre[50];
+
+
+
+
+}eLocalidad;
+
 //Estructura donde vamos a guardar los datos del cliente
 typedef struct  {
 
@@ -26,7 +35,7 @@ typedef struct  {
 	char calleEmpresa[100];
     int pedido;
 	//int alturaEmpresa;
-	char localidadEmpresa[100];
+	char localidadEmpresa[50];
     int isEmpty;
 
 

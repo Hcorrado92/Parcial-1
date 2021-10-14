@@ -15,7 +15,15 @@ int recicladoC = 0;
 
 int acumuladorC = 0;
 
+eLocalidad AltaLocalidad()
+{
 
+	eLocalidad localidad;
+
+	char nombre[50];
+
+	return localidad;
+}
 
 eCliente AltaCliente(){
 
@@ -28,12 +36,16 @@ eCliente AltaCliente(){
 	cliente.cuit = PedirEntero("Ingrese el CUIT del cliente \n");
 	PedirString(cliente.calleEmpresa ,  "Ingrese la direccion de la empresa \n", 50);
 	PedirString(cliente.localidadEmpresa ,  "Ingrese la localidad de la empresa  \n", 50);
+
 	cliente.pedido = 0;
     cliente.isEmpty = FULL;
 
 
 	return cliente;
 }
+
+
+
 
 ePunteros Punteros()
 {
