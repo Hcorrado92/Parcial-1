@@ -21,7 +21,9 @@ void VisualizarListaPedidosPendientes(ePedido listaP[], int tamp);
 void VisualizarListaPedidosCompletados(ePedido listaP[], int tamp);
 void ImprimirPedidosCompletados(eCliente lista[], ePedido listaP[], int tam, int tamp);
 void ImprimirPedidosPendientes(eCliente lista[], ePedido listaP[], int tam, int tamp);
-
+void BuscaClienteConMasPendientes2(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado);
+void BuscaClienteConMasCompletados(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado);
+void BuscaClienteConMasPedidos(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado);
 
 
 #endif /* INFORMES_H_ */

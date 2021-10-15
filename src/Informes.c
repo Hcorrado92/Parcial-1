@@ -13,69 +13,166 @@ int masCompletados = 0;
 int masPedidos = 0;
 
 
-/*int BuscaClienteConMasPendientes (eCliente lista[], ePedido listaP, int tam, int tamP, int estado, int *masP)
+void BuscaClienteConMasPendientes2(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado)
 {
 
 	int i;
 	int j;
+	int contador;
+    int flag;
+    int acum;
+    int id;
 
-	int id;
-	int idMasPendiente;
-	int acumulador;
-	acumulador = 0;
-
+    acum = 0;
+    flag = 0;
 
 	for (i = 0; i < tam; i++)
-	{
-		id = lista[i].idCliente;
-		idMasPendiente = lista[i].idCliente;
-	  for (j  = 0; j < tamP; j++)
-	  {
-		  if(listaP[i].cliente == id && listaP[i].estado == 1)
+	{ contador = 0;
 
-		  {
-			  acumulador++;
-		  }
-
-
-		  *masP = idMasPendiente;
-
-		  break;
-	  }
-
-	}
-
-return acumulador;
-
-}
-
-
-void ClienteConMasPendientes(eCliente lista[], ePedido listaP, int tam, int tamP, int estado, int* masP)
-
-{
-	int flag;
-	int masPendientes;
-	int i;
-
-	flag = 0;
-	for (i = 0; i < tam; i++)
-	{
-
-		masPendientes = BuscarClientesConMasPendientes(lista, listaP, tam, tamP, 1, &masPendientes);
-
-		if (flag == 0 || masPendientes > *masP )
+		if (lista[i].isEmpty == FULL)
 		{
-			*masP = masPendientes;
+			for (j = 0; j < tamP; j++)
+			{
+				if (lista[i].idCliente == listaP[j].cliente)
+				{
+
+					if (listaP[j].estado == estado)
+					{
+						contador++;
+
+
+
+
+
+				}
+			}
+
+
+				if(flag == 0 || contador > acum)
+
+				{
+				 acum = contador;
+				  id = listaP[j].cliente;
+				flag = 1;
+				            }
+									}
 		}
 
 
 
+
+
 	}
 
-	printf("El cliente con mas pendientes es %d", &masPendientes);
-
+	printf("El cliente con mas pedidos pendientes es %d \n", id);
 }
-*/
+
+void BuscaClienteConMasCompletados(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado)
+{
+
+	int i;
+	int j;
+	int contador;
+    int flag;
+    int acum;
+    int id;
+
+    acum = 0;
+    flag = 0;
+
+	for (i = 0; i < tam; i++)
+	{ contador = 0;
+
+		if (lista[i].isEmpty == FULL)
+		{
+			for (j = 0; j < tamP; j++)
+			{
+				if (lista[i].idCliente == listaP[j].cliente)
+				{
+
+					if (listaP[j].estado == estado)
+					{
+						contador++;
+
+
+
+
+
+				}
+			}
+
+
+				if(flag == 0 || contador > acum)
+
+				{
+				 acum = contador;
+				  id = listaP[j].cliente;
+				flag = 1;
+				            }
+									}
+		}
+
+
+
+
+
+	}
+
+	printf("El cliente con mas pedidos completados es %d \n", id);
+}
+
+void BuscaClienteConMasPedidos(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado)
+{
+	int i;
+		int j;
+		int contador;
+	    int flag;
+	    int acum;
+	    int id;
+
+	    acum = 0;
+	    flag = 0;
+
+		for (i = 0; i < tam; i++)
+		{ contador = 0;
+
+			if (lista[i].isEmpty == FULL)
+			{
+				for (j = 0; j < tamP; j++)
+				{
+					if (lista[i].idCliente == listaP[j].cliente)
+					{
+
+
+							contador++;
+
+
+
+
+				}
+
+
+					if(flag == 0 || contador > acum)
+
+					{
+					 acum = contador;
+					  id = listaP[j].cliente;
+					flag = 1;
+					            }
+										}
+			}
+
+
+
+
+
+		}
+
+		printf("El cliente con mas pedidos es %d \n", id);
+	}
+
+
+
 void MostrarListaClientes(eCliente lista[], ePedido listaP[], int tam, int tamP, int estado)
 {
 

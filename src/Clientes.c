@@ -10,6 +10,7 @@
 int id = 0;
 int idElegido = 0;
 int iCliente = 0;
+int masPendiente = 0;
 
 int recicladoC = 0;
 
@@ -498,6 +499,35 @@ int PromedioRecicladoC(int *clientes, int *cantidadkilos)
 
 
 
+/*void ClienteConMasPendientes(eCliente lista[], ePedido listaP, int tam, int tamP, int estado, int* masP)
+
+{
+	int flag;
+	int masPendientes;
+	int i;
+
+	flag = 0;
+	for (i = 0; i < tam; i++)
+	{
+
+		masPendientes = BuscarClientesConMasPendientes(lista, listaP, tam, tamP, 1, &masPendientes);
+
+		if (flag == 0 || masPendientes > *masP )
+		{
+			*masP = masPendientes;
+		}
+
+
+
+	}
+
+	printf("El cliente con mas pendientes es %d", &masPendientes);
+
+}
+*/
+
+
+
 
 
 
@@ -675,6 +705,21 @@ void MostrarMenu(eCliente lista[], ePedido listaP[], int tam, int tamp)
 
 	    		 }
 
+              break;
+
+	    	case 11:
+	    		 BuscaClienteConMasPendientes2(lista, listaP, tam, tamp, 1);
+
+	    		break;
+
+	    	 case 12:
+	    		 BuscaClienteConMasCompletados(lista, listaP, tam, tamp, 2);
+	    	break;
+
+	    	 case 13:
+	    		 BuscaClienteConMasPedidos(lista, listaP, tam, tamp, 1);
+
+	    		 break;
 
 	    	 }
 

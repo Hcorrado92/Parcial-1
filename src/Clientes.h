@@ -12,7 +12,9 @@
 #define EMPTY 0
 
 
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 //#include "Informes.h"
 //#include "Union.h"
 #include "Pedidos.h"
@@ -79,5 +81,8 @@ int BuscarIdLocalidad(int* idUltimo);
 void VisualizarListaClientes(eCliente lista[], int tam);
 void VisualizarListaPedidosPendientes(ePedido listaP[], int tamp);
 eLocalidad VerificarLocalidad(char local[], int *ID);
+int BuscaClienteConMasPendientes (eCliente lista[], ePedido listaP, int tam, int tamP, int estado);
+void ClienteConMasPendientes(eCliente lista[], ePedido listaP, int tam, int tamP, int estado, int* masP);
+
 
 #endif /* CLIENTES_H_ */
